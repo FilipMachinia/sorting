@@ -1,0 +1,11 @@
+<h2>Our array</h2>
+<div *ngFor="let item of myArray">
+  {{item.name}} - {{item.ranking}}
+</div>
+
+<button class="btn btn-success" (click)="sort(myArray)">Sort numbers</button>
+
+<br>
+<br>
+<button class="btn btn-success" (click)="average(myArray)">Check average</button>
+<p [hidden]="!averageNum">Average: {{averageNum | number : '1.2-2'}}</p>
